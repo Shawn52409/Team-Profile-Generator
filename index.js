@@ -7,8 +7,6 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern')
 
-const writeFileAsync = util.promisify(fs.writeFile);
-
 let myTeam = [];
 
 // prompts for the user to enter employee info
