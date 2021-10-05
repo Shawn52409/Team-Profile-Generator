@@ -90,7 +90,7 @@ const generateEngineerCard = (engineer) => {
       <div class="card-body"></div>
         <p class="border m-2">ID: ${engineer.id}</p>
         <p class="border m-2"><i class="fas fa-envelope-square"></i><a href="mailto:${engineer.email}"> ${engineer.email}<br></a></p>
-        <p class="border m-2">GitHub: ${engineer.gitHub}</p>
+        <p class="border m-2"><i class="fab fa-github"></i><a href="https://github.com/${engineer.gitHub}" target="_blank"> GitHub.com: ${engineer.gitHub}</a></p>
     </div>
   </div>
 `

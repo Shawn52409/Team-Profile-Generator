@@ -1,7 +1,6 @@
-// require inquirer, fs and util
+// require inquirer and fs
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 
 // require lib for classes
 const Employee = require('./lib/Employee');
@@ -64,7 +63,7 @@ const addEmployeeMenu = () => {
       console.log(myTeam);
       console.log("Your team has been created!!!")
       const html = generateHTML(myTeam);
-      console.log(html)      
+      // console.log(html)      
       writeHTML(html);           
       };
       
