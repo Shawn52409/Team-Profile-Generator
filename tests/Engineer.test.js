@@ -7,7 +7,7 @@ describe("Engineer", () => {
         expect(engineer.name).toBe('Shawn');
         expect(engineer.id).toBe('524');
         expect(engineer.email).toBe('shawnsmm@gmail.com');
-        expect(engineer.gitHub).toBe('Shawn52409')
+        expect(engineer.gitHub).toBe('Shawn52409');
         expect(engineer.type).toBe('Engineer');
     });
     it('Output engineer name', () =>{

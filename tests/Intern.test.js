@@ -7,7 +7,7 @@ describe("Intern", () => {
         expect(intern.name).toBe('Shawn');
         expect(intern.id).toBe('524');
         expect(intern.email).toBe('shawnsmm@gmail.com');
-        expect(intern.school).toBe('OSU')
+        expect(intern.school).toBe('OSU');
         expect(intern.type).toBe('Intern');
     });
     it('Output intern name', () =>{

@@ -54,6 +54,9 @@ const addEmployeeMenu = () => {
       return addEngineer();
     } else if (answers.option === 'Add Intern'){
       return addIntern();
+    } else {
+      console.log(myTeam);
+      console.log("Your team has been created!!!");
     }
   })       
      
@@ -127,12 +130,14 @@ const addIntern = () => {
 
 const init = () => {
     addManager()
-    .then (addEmployeeMenu)
-    .then (console.log(myTeam));
+      .then (addEmployeeMenu)
+       
+    
 
 
 
-      //.then((answers) => writeFileAsync('./dist/index.html', generateHTML(answers)))
+
+      //.then((answers) => writeFileAsync('./dist/index.html', generateHTML(myTeam)))
       //.then(() => console.log('Successfully wrote index.html'))
       //.catch((err) => console.error(err));
 };

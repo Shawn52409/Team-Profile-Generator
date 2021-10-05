@@ -7,7 +7,7 @@ describe("Manager", () => {
         expect(manager.name).toBe('Shawn');
         expect(manager.id).toBe('524');
         expect(manager.email).toBe('shawnsmm@gmail.com');
-        expect(manager.officeNumber).toBe('1')
+        expect(manager.officeNumber).toBe('1');
         expect(manager.type).toBe('Manager');
     });
     it('Output manager name', () =>{
