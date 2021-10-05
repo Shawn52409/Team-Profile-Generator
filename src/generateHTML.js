@@ -1,5 +1,5 @@
 // create cards for each team member and put the full HTML together
-function generateHTML(myTeam) {
+generateHTML = (myTeam) => {
     
     // created to hold the team cards
     let teamCards = [];
@@ -26,7 +26,8 @@ function generateHTML(myTeam) {
 
 // create full HTML with all employee cards
 const generateFullHTML = (allTeamCards) => {
-`<!DOCTYPE html>
+return `
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -61,7 +62,6 @@ const generateFullHTML = (allTeamCards) => {
 // create html manager card
 const generateManagerCard = (manager) => {
     return `
-    // manager card
     <div class="col-3 m-3">
     <div class="card">
       <div class="card-header bg-primary text-white">
@@ -80,7 +80,6 @@ const generateManagerCard = (manager) => {
 // create html engineer card
 const generateEngineerCard = (engineer) => {
     return `
-    // engineer card
     <div class="col-3 m-3">
     <div class="card">
       <div class="card-header bg-danger text-white">
@@ -99,7 +98,6 @@ const generateEngineerCard = (engineer) => {
 // create html intern card
 const generateInternCard = (intern) => {
     return `
-    // intern card
     <div class="col-3 m-3">
     <div class="card">
       <div class="card-header bg-warning text-white">

@@ -12,6 +12,7 @@ const Intern = require('./lib/Intern');
 // link to generateHTML
 const generateHTML = require('./src/generateHTML');
 
+// create array to hold to hold each team member object created
 let myTeam = [];
 
 // prompts for the user to enter employee info
@@ -63,11 +64,8 @@ const addEmployeeMenu = () => {
       console.log(myTeam);
       console.log("Your team has been created!!!")
       const html = generateHTML(myTeam);
-      console.log(html);
-      
-      //.then((html) => writeFileAsync('./dist/index.html', html))        
-      //.then(() => console.log('Successfully wrote index.html'))
-      //.catch((err) => console.error(err));
+      console.log(html)      
+      writeHTML(html);           
       };
       
     })
@@ -140,10 +138,21 @@ const addIntern = () => {
 
 
 
-
+// start prompts
 const init = () => {
     addManager()
       .then (addEmployeeMenu)   
 };
   
 init();
+
+//write file index.html
+function writeHTML (html){
+  fs.writeFile('./dist/intex.html', html, err => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(`Congratulation!!! File 'index.html' created and placed inside the 'dist' folder.`);
+    }
+  })
+}
