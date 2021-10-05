@@ -2,10 +2,15 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const Employee = require('./lib/Employee')
+
+// require lib for classes
+const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern')
+const Intern = require('./lib/Intern');
+
+// link to generateHTML
+const generateHTML = require('./src/generateHTML');
 
 let myTeam = [];
 
@@ -39,7 +44,7 @@ const addManager = () => {
       console.log(myTeam);
     })       
   };
-
+// menu to prompt adding a new employee or quit
 const addEmployeeMenu = () => {
   return inquirer.prompt([
     {
@@ -56,12 +61,19 @@ const addEmployeeMenu = () => {
       return addIntern();
     } else {
       console.log(myTeam);
-      console.log("Your team has been created!!!");
-    }
-  })       
-     
-};
-
+      console.log("Your team has been created!!!")
+      const html = generateHTML(myTeam);
+      console.log(html);
+      
+      //.then((html) => writeFileAsync('./dist/index.html', html))        
+      //.then(() => console.log('Successfully wrote index.html'))
+      //.catch((err) => console.error(err));
+      };
+      
+    })
+  }
+        
+// engineer prompts
 const addEngineer = () => {
   return inquirer.prompt([
     {
@@ -93,7 +105,7 @@ const addEngineer = () => {
   })       
      
 };
-
+// intern prompts
 const addIntern = () => {
   return inquirer.prompt([
     {
@@ -128,18 +140,10 @@ const addIntern = () => {
 
 
 
+
 const init = () => {
     addManager()
-      .then (addEmployeeMenu)
-       
-    
-
-
-
-
-      //.then((answers) => writeFileAsync('./dist/index.html', generateHTML(myTeam)))
-      //.then(() => console.log('Successfully wrote index.html'))
-      //.catch((err) => console.error(err));
+      .then (addEmployeeMenu)   
 };
   
 init();
