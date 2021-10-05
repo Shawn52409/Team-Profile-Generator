@@ -48,6 +48,7 @@ return `
 <body>
     <header class="bg-success p-3">
         <h1 class="display-3 text-center text-white fw-bolder">My Team</h1>
+        <div class="display-3 text-center text-white fw-bolder"><i class="fas fa-users"></i></div>
     </header>
   <div class="container">
     <div class="row">
