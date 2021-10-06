@@ -20,5 +20,9 @@ A user will need to download and install node.js, npm Inquirer and npm fs.  Once
 # Known Bugs
 No known bugs.
 
-## Contact info
+# Contact info
 shawnsmm@gmail.com
+
+github.com/Shawn52409
+
+www.linkedin.com/in/shawn-miller-b44a36217
