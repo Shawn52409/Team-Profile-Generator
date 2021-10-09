@@ -17,6 +17,9 @@ A user will need to download and install node.js, npm Inquirer and npm fs.  Once
 # Appearance
 ![Screenshot of README and command line](./img/screenshot.jpg)
 
+- The following link is a walkthrough video that demonstrates the functionality of the Team Profile Generator and all tests passing.
+https://watch.screencastify.com/v/ghZVgkr2Di6C3O8wLhPe
+
 # Known Bugs
 No known bugs.
 
